@@ -1,5 +1,5 @@
 package users;
 
 public enum Usertype {
-    ADMIN;
+    CUSTOMER, ADMIN;
 }

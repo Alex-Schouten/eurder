@@ -4,16 +4,17 @@ import java.util.Objects;
 import java.util.UUID;
 
 public abstract class Customer {
-    private final String id;
-    private final String firstName;
+    private String id;
+    private String firstName;
     private String lastName;
     private String emailadress;
     private String street;
     private Integer streetNumber;
     private Integer postalcode;
     private String city;
+    private Usertype usertype;
 
-    public Customer(String firstName, String lastName, String emailadress, String street, Integer streetNumber, Integer postalcode, String city){
+    public Customer(String firstName, String lastName, String emailadress, String street, Integer streetNumber, Integer postalcode, String city, Usertype usertype){
         this.id = UUID.randomUUID().toString();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -22,6 +23,7 @@ public abstract class Customer {
         this.streetNumber = streetNumber;
         this.postalcode = postalcode;
         this.city = city;
+        this.usertype = usertype;
     }
 
     public String getId(){
@@ -56,6 +58,10 @@ public abstract class Customer {
         return city;
     }
 
+    public Usertype getUsertype(){
+        return usertype;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -80,6 +86,7 @@ public abstract class Customer {
                 ", streetNumber=" + streetNumber +
                 ", postalcode=" + postalcode +
                 ", city='" + city + '\'' +
+                ", usertype=" + usertype +
                 '}';
     }
 }
