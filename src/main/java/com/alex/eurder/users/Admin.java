@@ -1,4 +1,4 @@
-package users;
+package com.alex.eurder.users;
 
 public class Admin extends Customer {
 

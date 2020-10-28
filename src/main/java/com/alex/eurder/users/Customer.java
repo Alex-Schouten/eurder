@@ -1,4 +1,4 @@
-package users;
+package com.alex.eurder.users;
 
 import java.util.Objects;
 import java.util.UUID;
