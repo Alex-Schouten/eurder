@@ -1,4 +1,4 @@
-package com.alex.eurder;
+package com.alex.eurder.business.entity;
 
 import java.util.Objects;
 import java.util.UUID;

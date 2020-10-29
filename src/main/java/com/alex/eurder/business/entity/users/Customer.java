@@ -1,9 +1,9 @@
-package com.alex.eurder.users;
+package com.alex.eurder.business.entity.users;
 
 import java.util.Objects;
 import java.util.UUID;
 
-public abstract class Customer {
+public class Customer {
     private String id;
     private String firstName;
     private String lastName;
@@ -24,6 +24,17 @@ public abstract class Customer {
         this.postalcode = postalcode;
         this.city = city;
         this.usertype = usertype;
+    }
+
+    public Customer(String firstName, String lastName, String emailadress, String street, Integer streetNumber, Integer postalcode, String city) {
+        this.id = UUID.randomUUID().toString();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.emailadress = emailadress;
+        this.street = street;
+        this.streetNumber = streetNumber;
+        this.postalcode = postalcode;
+        this.city = city;
     }
 
     public String getId(){

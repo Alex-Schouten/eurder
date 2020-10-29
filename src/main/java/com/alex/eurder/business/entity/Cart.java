@@ -1,7 +1,7 @@
-package com.alex.eurder;
+package com.alex.eurder.business.entity;
 
 public class Cart {
-    private final Item item;
+    private Item item;
     private String amountOfItems;
     private String shippingDate;
 
