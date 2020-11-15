@@ -1,15 +1,21 @@
 package com.alex.eurder.business.repository;
 
 import com.alex.eurder.business.entity.users.Customer;
+import com.alex.eurder.exceptions.users.CustomerAlreadyExistsException;
 
-import javax.swing.undo.CannotUndoException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class CustomerRepository {
 
-    private Map<String, Customer> customers;
+    private final Map<String, Customer> customers;
+
+    public CustomerRepository(){
+        this.customers = new HashMap<>();
+        addFirstCustomer();
+    }
 
     public void addFirstCustomer(){
         Customer customer = new Customer("Alex", "Schouten", "Alex@gmail.com", "Nieuwstraat", 5, 3500, "Hasselt");
@@ -17,8 +23,10 @@ public class CustomerRepository {
     }
 
     public Customer save(Customer customer){
-        if(customers.containsValue(customer)) throw new CannotUndoException(customer.getFirstName() + " " + customer.getLastName());
+
+        if(customers.containsValue(customer)) throw new CustomerAlreadyExistsException(customer.getId() + " already exists");
         customers.put(customer.getId(), customer);
+        return customer;
     }
 
     public List<Customer> getCustomers(){

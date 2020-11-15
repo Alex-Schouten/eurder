@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-public class AdminController {
     @RestController
     @RequestMapping(path = "/admins")
     public class AdminController {
@@ -19,12 +18,6 @@ public class AdminController {
         @Autowired
         public AdminController(AdminService adminService) {
             this.adminService = adminService;
-        }
-
-        @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-        @ResponseStatus(HttpStatus.OK)
-        public List<AdminDTO> getAllMembers() {
-            return adminService.getAllAdmins();
         }
 
         @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)

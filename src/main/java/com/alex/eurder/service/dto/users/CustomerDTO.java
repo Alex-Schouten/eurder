@@ -1,16 +1,14 @@
 package com.alex.eurder.service.dto.users;
 
-import java.util.Objects;
-
 public class CustomerDTO {
 
     private String id;
     private String firstName;
     private String lastName;
-    private String emailadress;
+    private String mailAddress;
     private String street;
     private Integer streetNumber;
-    private Integer postalcode;
+    private Integer postalCode;
     private String city;
 
     public String getId(){
@@ -37,12 +35,12 @@ public class CustomerDTO {
         this.lastName = lastName;
     }
 
-    public String getEmailadress(){
-        return emailadress;
+    public String getMailAddress(){
+        return mailAddress;
     }
 
-    public void setEmailadress(String emailadress){
-        this.emailadress = emailadress;
+    public void setMailAddress(String mailAddress){
+        this.mailAddress = mailAddress;
     }
 
     public String getStreet(){
@@ -61,12 +59,12 @@ public class CustomerDTO {
         this.streetNumber = streetNumber;
     }
 
-    public Integer getPostalcode(){
-        return postalcode;
+    public Integer getPostalCode(){
+        return postalCode;
     }
 
-    public void setPostalcode(Integer postalcode){
-        this.postalcode = postalcode;
+    public void setPostalCode(Integer postalCode){
+        this.postalCode = postalCode;
     }
 
     public String getCity(){
@@ -77,17 +75,5 @@ public class CustomerDTO {
         this.city = city;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        CustomerDTO that = (CustomerDTO) o;
-        return Objects.equals(id, that.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
 }
 

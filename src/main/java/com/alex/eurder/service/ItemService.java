@@ -29,16 +29,16 @@ public class ItemService {
         return itemMapper.detailDTO(item);
     }
 
-    public ItemDTO updateAnItem(ItemDTO itemDTO) {
-        Item item = itemRepository.getItem(itemId);
-
-        item.getItemId();
-        item.getItemName();
-        item.getItemDescription();
-        item.getItemPrice();
-        item.getItemsInStock();
-        return itemMapper.detailDTO(item);
-    }
+//    public ItemDTO updateAnItem(ItemDTO itemDTO) {
+//        Item item = itemRepository.getItem(itemId);
+//
+//        item.getItemId();
+//        item.getItemName();
+//        item.getItemDescription();
+//        item.getItemPrice();
+//        item.getItemsInStock();
+//        return itemMapper.detailDTO(item);
+//    }
 
 
     public List<ItemDTOCompactOverview> getItemByName(String partialItemName) {
@@ -52,22 +52,13 @@ public class ItemService {
         return items.stream().map(item -> itemMapper.overviewDTO(item)).collect(Collectors.toList());
     }
 
-
-
-
-
-
-
-
-
-
     public ItemRepository getItemRepository(){return itemRepository;}
 
     public ItemMapper getItemMapper(){return itemMapper;}
 
-    public ItemDTO getItemByID(String id) {
-        return itemMapper.toDTO(itemRepository.getItemMap().get(id));
-    }
+//    public ItemDTO getItemByID(String id) {
+//        return itemMapper.toDTO(itemRepository.getItemMap().get(id));
+//    }
 
 
 

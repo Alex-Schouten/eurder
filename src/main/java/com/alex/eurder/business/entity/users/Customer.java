@@ -7,20 +7,20 @@ public class Customer {
     private final String id;
     private final String firstName;
     private final String lastName;
-    private final String emailadress;
+    private final String mailAddress;
     private final String street;
     private final Integer streetNumber;
-    private final Integer postalcode;
+    private final Integer postalCode;
     private final String city;
 
-    public Customer(String firstName, String lastName, String emailadress, String street, Integer streetNumber, Integer postalcode, String city) {
+    public Customer(String firstName, String lastName, String mailAddress, String street, Integer streetNumber, Integer postalCode, String city) {
         this.id = UUID.randomUUID().toString();
         this.firstName = firstName;
         this.lastName = lastName;
-        this.emailadress = emailadress;
+        this.mailAddress = mailAddress;
         this.street = street;
         this.streetNumber = streetNumber;
-        this.postalcode = postalcode;
+        this.postalCode = postalCode;
         this.city = city;
     }
 
@@ -36,8 +36,8 @@ public class Customer {
         return lastName;
     }
 
-    public String getEmailadress(String emailadress){
-        return emailadress;
+    public String getMailAddress(String mailAddress){
+        return mailAddress;
     }
 
     public String getStreet(String street){
@@ -48,8 +48,8 @@ public class Customer {
         return streetNumber;
     }
 
-    public Integer getPostalcode(Integer postalcode){
-        return postalcode;
+    public Integer getPostalCode(Integer postalCode){
+        return postalCode;
     }
 
     public String getCity(String city){
@@ -76,14 +76,13 @@ public class Customer {
                 "id='" + id + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", emailadress='" + emailadress + '\'' +
+                ", mailAddress='" + mailAddress + '\'' +
                 ", street='" + street + '\'' +
                 ", streetNumber=" + streetNumber +
-                ", postalcode=" + postalcode +
+                ", postalCode=" + postalCode +
                 ", city='" + city + '\'' +
                 '}';
     }
-
 }
 
 
