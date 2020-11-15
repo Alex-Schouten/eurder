@@ -1,7 +1,5 @@
 package com.alex.eurder.service.dto.users;
 
-import com.alex.eurder.business.entity.users.Usertype;
-
 import java.util.Objects;
 
 public class CustomerDTO {
@@ -14,7 +12,6 @@ public class CustomerDTO {
     private Integer streetNumber;
     private Integer postalcode;
     private String city;
-    private Usertype usertype;
 
     public String getId(){
         return id;
@@ -78,14 +75,6 @@ public class CustomerDTO {
 
     public void setCity(String city){
         this.city = city;
-    }
-
-    public Usertype usertype(){
-        return usertype;
-    }
-
-    public void setUsertype(Usertype usertype){
-        this.usertype = usertype;
     }
 
     @Override

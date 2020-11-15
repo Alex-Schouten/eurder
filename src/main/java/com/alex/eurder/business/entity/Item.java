@@ -4,10 +4,10 @@ import java.util.Objects;
 
 public class Item {
     private final long itemId;
-    private String itemName;
-    private String itemDescription;
-    private Integer itemPrice;
-    private Integer itemsInStock;
+    private final String itemName;
+    private final String itemDescription;
+    private final Integer itemPrice;
+    private final Integer itemsInStock;
 
     public Item(long itemId, String itemName, String itemDescription, Integer itemPrice,Integer itemsInStock){
         this.itemId = itemId;

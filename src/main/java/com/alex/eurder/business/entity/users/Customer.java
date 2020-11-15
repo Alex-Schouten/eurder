@@ -4,27 +4,14 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class Customer {
-    private String id;
-    private String firstName;
-    private String lastName;
-    private String emailadress;
-    private String street;
-    private Integer streetNumber;
-    private Integer postalcode;
-    private String city;
-    private Usertype usertype;
-
-    public Customer(String firstName, String lastName, String emailadress, String street, Integer streetNumber, Integer postalcode, String city, Usertype usertype){
-        this.id = UUID.randomUUID().toString();
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.emailadress = emailadress;
-        this.street = street;
-        this.streetNumber = streetNumber;
-        this.postalcode = postalcode;
-        this.city = city;
-        this.usertype = usertype;
-    }
+    private final String id;
+    private final String firstName;
+    private final String lastName;
+    private final String emailadress;
+    private final String street;
+    private final Integer streetNumber;
+    private final Integer postalcode;
+    private final String city;
 
     public Customer(String firstName, String lastName, String emailadress, String street, Integer streetNumber, Integer postalcode, String city) {
         this.id = UUID.randomUUID().toString();
@@ -62,16 +49,13 @@ public class Customer {
     }
 
     public Integer getPostalcode(Integer postalcode){
-        return streetNumber;
+        return postalcode;
     }
 
     public String getCity(String city){
         return city;
     }
 
-    public Usertype getUsertype(){
-        return usertype;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -97,7 +81,6 @@ public class Customer {
                 ", streetNumber=" + streetNumber +
                 ", postalcode=" + postalcode +
                 ", city='" + city + '\'' +
-                ", usertype=" + usertype +
                 '}';
     }
 

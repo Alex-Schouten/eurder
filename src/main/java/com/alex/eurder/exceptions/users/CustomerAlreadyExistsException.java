@@ -1,9 +1,9 @@
 package com.alex.eurder.exceptions.users;
 
-public class UserAlreadyExistsException extends RuntimeException {
+public class CustomerAlreadyExistsException extends RuntimeException {
     String message;
 
-    public UserAlreadyExistsException(String message) {
+    public CustomerAlreadyExistsException(String message) {
         this.message = message;
     }
 

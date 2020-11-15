@@ -1,15 +1,47 @@
 package com.alex.eurder.service.dto.users;
 
-import com.alex.eurder.business.entity.users.Usertype;
+import java.util.Objects;
 
 public class AdminDTO {
-    private Usertype usertype;
 
-    public Usertype usertype(){
-        return usertype;
+    private String id;
+    private String firstName;
+    private String lastName;
+
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setUsertype(Usertype usertype){
-        this.usertype = usertype;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AdminDTO adminDTO = (AdminDTO) o;
+        return Objects.equals(id, adminDTO.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

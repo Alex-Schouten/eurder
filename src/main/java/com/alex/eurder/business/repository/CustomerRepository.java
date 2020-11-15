@@ -1,8 +1,8 @@
 package com.alex.eurder.business.repository;
 
 import com.alex.eurder.business.entity.users.Customer;
-import org.springframework.stereotype.Repository;
 
+import javax.swing.undo.CannotUndoException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -16,12 +16,18 @@ public class CustomerRepository {
         customers.put(customer.getId(), customer);
     }
 
-    public List<Customer> getCustemors(){
+    public Customer save(Customer customer){
+        if(customers.containsValue(customer)) throw new CannotUndoException(customer.getFirstName() + " " + customer.getLastName());
+        customers.put(customer.getId(), customer);
+    }
+
+    public List<Customer> getCustomers(){
         return new ArrayList<>(customers.values());
     }
 
-    public Map<String, Customer> getMemberMap ()
+    public Map<String, Customer> getCustomerMap()
     {
         return customers;
     }
+
 }
