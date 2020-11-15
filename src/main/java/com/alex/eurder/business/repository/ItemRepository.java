@@ -39,7 +39,7 @@ public class ItemRepository {
     public Item getItem(long itemId) {
         Item item = items.get(itemId);
         if (Objects.isNull(item)) {
-            throw new ItemNotFoundException("There is no book available with the isbn number " + itemId);
+            throw new ItemNotFoundException("There is no item with this ID " + itemId);
         }
         return item;
     }
