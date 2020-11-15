@@ -8,6 +8,14 @@ public class AdminDTO {
     private String firstName;
     private String lastName;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -22,14 +30,6 @@ public class AdminDTO {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     @Override

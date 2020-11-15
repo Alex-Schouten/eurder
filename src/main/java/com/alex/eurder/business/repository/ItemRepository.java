@@ -9,7 +9,7 @@ import java.util.*;
 @Repository
 public class ItemRepository {
 
-    private Map<Long, Item> items;
+    private final Map<Long, Item> items;
 
     public ItemRepository(){
         this.items =  new HashMap<>();
@@ -44,28 +44,16 @@ public class ItemRepository {
         return item;
     }
 
-    public Item delete(long itemId) {
-        Item result = items.remove(itemId);
-        deletedItems.put(result.getItemId(), result);
-        return result;
-    }
-
-    public Item retrieveDeletedItem(long itemId){
-        Item result = deletedItems.remove(itemId);
-        items.put(result.getItemId(), result);
-        return result;
-    }
-
     public List<Item> getItems() {
         return new ArrayList<>(items.values());
     }
 
-    public Map<Long,Item> getItemMap(){
-        return items;
-    }
-
-    public Map<Long, Item> getDeletedItems(){
-        return deletedItems;
-    }
-}
+//    public Map<Long,Item> getItemMap(){
+//        return items;
+//    }
+//
+//    public Map<Long, Item> getDeletedItems(){
+//        return deletedItems;
+//    }
+///
 }

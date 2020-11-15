@@ -29,23 +29,9 @@ public class ItemController {
     @PutMapping(path = "/admin/{id}", produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
-    public ItemDTO updateAnItem(@RequestBody ItemDTO itemDTO, @PathVariable String id) {
-        return itemService.updateAnItem(itemDTO);
+    public ItemDTO updateAnItem(@PathVariable long id, @RequestBody ItemDTO itemDTO) {
+        return itemService.updateAnItem(id, itemDTO);
     }
-
-
-   @GetMapping(path = "/findByName/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
-   @ResponseStatus(HttpStatus.OK)
-   public List<ItemDTO> getItemByName(@PathVariable String itemName, @PathVariable String name){
-       return itemService.getItemByID(itemName);
-   }
-
-
-   @GetMapping(path = "/findByID/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(HttpStatus.OK)
-    public List<ItemDTO> itemDTO(@PathVariable String id) {
-       return itemService.getItemByID(id);
-   }
 
 
 }

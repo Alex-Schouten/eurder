@@ -18,8 +18,8 @@ public class AdminMapper {
     public AdminDTO toDTO(Admin admin) {
         AdminDTO result = new AdminDTO();
         result.setId(admin.getId());
-        result.setFirstName(admin.getFirstname());
-        result.setLastName(admin.getLastname());
+        result.setFirstName(admin.getFirstName());
+        result.setLastName(admin.getLastName());
         return result;
     }
 }

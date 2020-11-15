@@ -26,13 +26,13 @@ public class CustomerController {
         return customerService.save(customerDTO);
     }
 
-    @GetMapping(path= "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path= "/admin/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public CustomerDTO getOneCustomerByID(@PathVariable String id){
         return customerService.getOneCustomerByID(id);
     }
 
-    @GetMapping(path= "/admin", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path= "/admin/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public List<CustomerDTO> getAllCustomersByID() {
         return customerService.getAllCustomersByID();

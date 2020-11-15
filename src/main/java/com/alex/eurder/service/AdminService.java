@@ -5,10 +5,9 @@ import com.alex.eurder.business.repository.AdminRepository;
 import com.alex.eurder.service.dto.users.AdminDTO;
 import com.alex.eurder.service.mapper.AdminMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
+@Service
 public class AdminService {
     private final AdminRepository adminRepository;
     private final AdminMapper adminMapper;
@@ -25,9 +24,4 @@ public class AdminService {
         return adminMapper.toDTO(admin);
     }
 
-    public List<AdminDTO> getAllAdmins() {
-        return adminRepository.getAdmins().stream()
-                .map(adminMapper::toDTO)
-                .collect(Collectors.toList());
-    }
 }
