@@ -1,24 +1,23 @@
 package com.alex.eurder.business.entity;
 
 import java.util.Objects;
-import java.util.UUID;
 
 public class Item {
-    private String itemId;
+    private final long itemId;
     private String itemName;
     private String itemDescription;
     private Integer itemPrice;
     private Integer itemsInStock;
 
-    public Item(String itemName, String itemDescription, Integer itemPrice,Integer itemsInStock){
-        this.itemId = UUID.randomUUID().toString();
+    public Item(long itemId, String itemName, String itemDescription, Integer itemPrice,Integer itemsInStock){
+        this.itemId = itemId;
         this.itemName = itemName;
         this.itemDescription = itemDescription;
         this.itemPrice = itemPrice;
         this.itemsInStock = itemsInStock;
     }
 
-    public String getItemId(){
+    public long getItemId(){
         return itemId;
     }
 
@@ -43,7 +42,7 @@ public class Item {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Item item = (Item) o;
-        return Objects.equals(itemId, item.itemId);
+        return itemId == item.itemId;
     }
 
     @Override
@@ -54,7 +53,7 @@ public class Item {
     @Override
     public String toString() {
         return "Item{" +
-                "itemId='" + itemId + '\'' +
+                "itemId=" + itemId +
                 ", itemName='" + itemName + '\'' +
                 ", itemDescription='" + itemDescription + '\'' +
                 ", itemPrice=" + itemPrice +

@@ -28,7 +28,7 @@ public class CustomerDTO {
         return firstName;
     }
 
-    public void setFirstName(){
+    public void setFirstName(String firstName){
         this.firstName = firstName;
     }
 
@@ -36,7 +36,7 @@ public class CustomerDTO {
         return lastName;
     }
 
-    public void setLastName(){
+    public void setLastName(String lastName){
         this.lastName = lastName;
     }
 
@@ -44,7 +44,7 @@ public class CustomerDTO {
         return emailadress;
     }
 
-    public void setEmailadress(){
+    public void setEmailadress(String emailadress){
         this.emailadress = emailadress;
     }
 
@@ -52,7 +52,7 @@ public class CustomerDTO {
         return street;
     }
 
-    public void setStreet(){
+    public void setStreet(String street){
         this.street = street;
     }
 
@@ -60,7 +60,7 @@ public class CustomerDTO {
         return streetNumber;
     }
 
-    public void setStreetNumber(){
+    public void setStreetNumber(Integer streetNumber){
         this.streetNumber = streetNumber;
     }
 
@@ -68,7 +68,7 @@ public class CustomerDTO {
         return postalcode;
     }
 
-    public void setPostalcode(){
+    public void setPostalcode(Integer postalcode){
         this.postalcode = postalcode;
     }
 
@@ -76,7 +76,7 @@ public class CustomerDTO {
         return city;
     }
 
-    public void setCity(){
+    public void setCity(String city){
         this.city = city;
     }
 

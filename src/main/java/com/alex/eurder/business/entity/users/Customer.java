@@ -100,6 +100,7 @@ public class Customer {
                 ", usertype=" + usertype +
                 '}';
     }
+
 }
 
 
